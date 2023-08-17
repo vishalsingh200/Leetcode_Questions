@@ -11,7 +11,7 @@ class Solution {
             }
         }
         for(int index = 0; index < arr.length; index++){
-            if(arr[index] != index + 1){
+            if(arr[index] - 1 != index){
                 return index + 1;
             }
         }
