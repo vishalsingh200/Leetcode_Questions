@@ -37,21 +37,22 @@ class Solution{
     // n: size of array
     //Function to find the sum of contiguous subarray with maximum sum.
     long maxSubarraySum(int arr[], int n){
-        // int sum = 0;
-        // for(int i = 0; i < n; i++){
-        //     sum += arr[i];
-        // }
-        // if(sum < 0){
-        //     return -1;
-        // }
-        // return sum;
-        long maxSum = Integer.MIN_VALUE;
+        
+        // Your code here
         long sum = 0;
+        long max = Integer.MIN_VALUE;
         for(int i = 0; i < n; i++){
-            sum = Math.max(arr[i], sum + arr[i]);
-            maxSum = Math.max(maxSum, sum);
+            sum = sum + arr[i];
+            
+            if(sum > max){
+                max = sum;
+            }
+            if(sum < 0){
+                sum = 0;
+            }
+            
         }
-        return maxSum;
+        return max;
     }
     
 }
