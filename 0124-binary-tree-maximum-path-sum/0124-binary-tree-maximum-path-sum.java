@@ -24,8 +24,8 @@ class Solution {
         if(root == null){
             return 0;
         }
-        int l = Math.max(0, sum(root.left, maxi));
-        int r = Math.max(0, sum(root.right, maxi));
+        int l = Math.max(0, sum(root.left, maxi));   // if left of root is negative return 0
+        int r = Math.max(0, sum(root.right, maxi));  // if right of root is negative retun 0
         
         
         maxi[0] = Math.max(maxi[0], root.val + l + r);
